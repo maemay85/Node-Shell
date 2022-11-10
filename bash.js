@@ -9,8 +9,11 @@ process.stdin.on('data', (data) => {
     let pwd = require('./pwd');
   process.stdout.write(pwd)
 
+  } else if (cmd === 'ls') {
+    let ls = require('./ls');
+    console.log(ls);
+    process.stdout.write(ls);
   } else {
-
   process.stdout.write('You typed: ' + cmd);
   }
 
